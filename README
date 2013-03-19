@@ -1,0 +1,18 @@
+>PROG :
+	>How would you design a stack which, in addition to push and pop, also has a function
+	min which returns the minimum element? Push, pop and min should all operate in
+	O(1) time.
+
+>LOGIC :
+	>Maintain another stack of pointers, here if we get anything lesser than at the top of pointers ka stack
+	then we push another pointer in stack of pointer, pointing to new,lesser value.
+	>Whenever min() is asked, this stack of pointer can immediately return.
+
+>COULD BE BETTER :
+	>No need to maintain stack of pointers, just maintain other stack , where u keep on pushing newer and 
+	lesser nos that u find.
+
+>BUG :
+	>If there are multiple copies of the current min number, then the current prog doesnt maintain pointer to all
+	of them.
+	>>UPDATE : Just fixed this !! But didnt test the fix !!
